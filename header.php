@@ -30,15 +30,13 @@ if (strtolower($iniRG = ini_get('register_globals')) == 'on' || $iniRG == 1)
 if (!defined('T_NO_STARTUP') && file_exists('install.php'))
     die('Please remove <i>install.php</i> before using OBBLM.');
 
-//error_reporting(E_ALL);
-error_reporting((E_ALL | E_STRICT) & ~E_DEPRECATED);
 session_start();
 
 /*********************
  *   General
  *********************/
 
-define('OBBLM_VERSION', '0.97 SVN');
+define('OBBLM_VERSION', '0.96');
 $credits = array('Pierluigi Masia', 'Mag Merli', 'Lars Scharrenberg', 'Tim Haini', 'Daniel Straalman', 'Juergen Unfried', 'Sune Radich Christensen', 'Michael Bielec', 'Grégory Romé', 'Goiz Ruiz de Gopegui', 'Ryan Williams', 'Ian Williams');
 define('MAX_RECENT_GAMES', 15); // This limits the number of rows shown in the "recent/upcoming games" tables.
 define('MAX_TNEWS', 3); // This number of entries are shown on the team news board.
@@ -90,7 +88,7 @@ require_once('lib/settings_default.php'); # Defaults
 require_once('settings.php');             # Overrides
 require_once('localsettings/settings_none.php'); # Defaults. Overrides are league dependant and are not loaded here - see setupGlobalVars()
 # Load game data --- Module settings might depend on game data, so we include it first
-require_once('lib/game_data_lrb6.php'); # LRB6 MUST be loaded.
+require_once('lib/game_data.php'); # LRB6 MUST be loaded.
 if ($settings['custom_races']['Brettonia'])         {require_once('lib/game_data_brettonia.php');}
 if ($settings['custom_races']['Daemons of khorne']) {require_once('lib/game_data_daemonsofkhorne.php');}
 if ($settings['custom_races']['Apes of wrath'])     {require_once('lib/game_data_apesofwrath.php');}
@@ -157,11 +155,4 @@ else {
     require_once('modules/modsheader.php'); # Registration of modules.
     setupGlobalVars(T_SETUP_GLOBAL_VARS__POST_LOAD_MODULES);
 }
-
-/******************************
-   Translate skills globally
-******************************/
-global $lng;
-$lng->TranslateSkills();
-
 

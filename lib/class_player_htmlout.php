@@ -31,7 +31,6 @@ define('COLOR_HTML_DEAD',     '#F78771');
 define('COLOR_HTML_SOLD',     '#D2B477');
 define('COLOR_HTML_STARMERC', '#bb99bb');
 define('COLOR_HTML_JOURNEY',  '#99BBBB');
-define('COLOR_HTML_JOURNEY_USED', '#FF99FF');
 define('COLOR_HTML_NEWSKILL', '#BBBBBB');
 //-----
 define('COLOR_HTML_CHR_EQP1', '#B3F0B3'); // Characteristic equal plus one.
@@ -149,7 +148,7 @@ private function _about($ALLOW_EDIT)
                     </tr>
                     <tr>
                         <td><b><?php echo $lng->getTrn('common/pos');?></b></td>
-                        <td><?php echo $lng->getTrn('position/'.strtolower($lng->FilterPosition($p->position))); ?></td>
+                        <td><?php echo $p->position; ?></td>
                     </tr>
                     <tr>
                         <td><b><?php echo $lng->getTrn('common/team');?></b></td>

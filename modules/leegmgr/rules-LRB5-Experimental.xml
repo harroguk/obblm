@@ -205,7 +205,7 @@
             <stakes>false</stakes>
         </roster>
         <roster>
-            <name>Chaos Pact</name>
+            <name>Chaos Renegades</name>
             <rerollValue>70000</rerollValue>
             <positions>
                 <position>
@@ -2022,7 +2022,7 @@
             </skills>
             <feeder>false</feeder>
             <races>
-                <race>Chaos Pact</race>
+                <race>Chaos Renegades</race>
                 <race>Goblin</race>
                 <race>Ogre</race>
                 <race>Orc</race>
@@ -2086,7 +2086,7 @@
             </skills>
             <feeder>true</feeder>
             <races>
-                <race>Chaos Pact</race>
+                <race>Chaos Renegades</race>
                 <race>Vampire</race>
             </races>
         </star>
@@ -2581,7 +2581,7 @@
             <feeder>false</feeder>
             <races>
                 <race>Chaos</race>
-                <race>Chaos Pact</race>
+                <race>Chaos Renegades</race>
                 <race>Nurgle</race>
             </races>
         </star>
@@ -2681,7 +2681,7 @@
                 <race>Amazon</race>
                 <race>Chaos</race>
                 <race>Chaos Dwarf</race>
-                <race>Chaos Pact</race>
+                <race>Chaos Renegades</race>
                 <race>Dark Elf</race>
                 <race>Dwarf</race>
                 <race>Elf</race>
@@ -3014,7 +3014,7 @@
             </skills>
             <feeder>false</feeder>
             <races>
-                <race>Chaos Pact</race>
+                <race>Chaos Renegades</race>
                 <race>Orc</race>
             </races>
         </star>
@@ -3126,7 +3126,7 @@
             <feeder>false</feeder>
             <races>
                 <race>Chaos Dwarf</race>
-                <race>Chaos Pact</race>
+                <race>Chaos Renegades</race>
             </races>
         </star>
     </stars>

@@ -99,11 +99,10 @@ class Player
     public $inj_ni = 0;
 
     // Player status
-    public $is_sold             = false;
-    public $is_dead             = false;
-    public $is_mng              = false;
-    public $is_journeyman       = false;
-    public $is_used_journeyman  = false;
+    public $is_sold       = false;
+    public $is_dead       = false;
+    public $is_mng        = false;
+    public $is_journeyman = false;
 
     // Others
     public $icon = "";
@@ -144,11 +143,10 @@ class Player
         $this->def_skills = empty($this->def_skills) ? array() : explode(',', $this->def_skills);
         $this->setSkills();
         
-        $this->is_dead              = ($this->status == DEAD);
-        $this->is_mng               = !in_array($this->status, array(NONE, DEAD));
-        $this->is_sold              = (bool) $this->date_sold;
-        $this->is_journeyman        = ($this->type == PLAYER_TYPE_JOURNEY);
-        $this->is_journeyman_used   = ($this->type == PLAYER_TYPE_JOURNEY) && ($this->mv_played > 0);
+        $this->is_dead       = ($this->status == DEAD);
+        $this->is_mng        = !in_array($this->status, array(NONE, DEAD));
+        $this->is_sold       = (bool) $this->date_sold;
+        $this->is_journeyman = ($this->type == PLAYER_TYPE_JOURNEY);
         
         /*
             Misc
@@ -334,7 +332,7 @@ class Player
          **/
 
         global $rules;
-        $lid = get_alt_col('teams', 'team_id̈́', $this->owned_by_team_id, 'f_lid');
+        $lid = get_alt_col('teams', 'team_id', $this->owned_by_team_id, 'f_lid');
         setupGlobalVars(T_SETUP_GLOBAL_VARS__LOAD_LEAGUE_SETTINGS, array('lid' => (int) $lid)); // Load correct $rules for league.
 
         if (!$this->is_sold || $this->is_dead)

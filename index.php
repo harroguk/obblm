@@ -20,7 +20,6 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-
 $time_start = microtime(true); # Used by MTS().
 
 /*
@@ -79,4 +78,4 @@ switch ($_GET['section'])
 HTMLOUT::frame_end(); // Spit out all the end-tags.
 mysql_close($conn);
 MTS('END OF SCRIPT');
-
+?>
