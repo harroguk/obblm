@@ -31,6 +31,7 @@ define('T_RACE_WOOD_ELF', 20);
 define('T_RACE_CHAOS_PACT', 21);
 define('T_RACE_SLANN', 22);
 define('T_RACE_UNDERWORLD', 23);
+define('T_RACE_BRETTONIA', 24);
 
 $DEA = array (
 	'Amazon'	=> array (
@@ -1639,6 +1640,54 @@ $DEA = array (
 						'pos_id'          => 234,
 				)
 		)
+	),
+	'Brettonia' => array (
+		'other'	=> array (
+			'rr_cost' => 60000,
+			'icon' => 'brettonian.jpg',
+			'race_id' => T_RACE_BRETTONIA, # (Brettonia)
+		),
+		'players'	=> array (
+				'Lineman'	=> array (
+						'ma'        	=> 6,
+						'st'        	=> 3,
+						'ag'        	=> 2,
+						'av'        	=> 7,
+						'def'	    => array (4),
+						'norm'		=> array ('G'),
+						'doub'		=> array ('A', 'S', 'P'),
+						'qty'			  => 16,
+						'cost'			  => 40000,
+						'icon'			  => 'hlineman1an',
+						'pos_id'          => 235,
+				),
+				'Yeoman'	=> array (
+						'ma'        	=> 6,
+						'st'        	=> 3,
+						'ag'        	=> 3,
+						'av'        	=> 8,
+						'def'	    => array (14),
+						'norm'		=> array ('G', 'S'),
+						'doub'		=> array ('A', 'P'),
+						'qty'			  => 4,
+						'cost'			  => 70000,
+						'icon'			  => 'hblitzer1an',
+						'pos_id'          => 236,
+				),
+				'Blitzer'	=> array (
+						'ma'        	=> 8,
+						'st'        	=> 3,
+						'ag'        	=> 3,
+						'av'        	=> 8,
+						'def'	    => array (1, 20, 2),
+						'norm'		=> array ('G', 'S'),
+						'doub'		=> array ('A', 'P'),
+						'qty'			  => 4,
+						'cost'			  => 120000,
+						'icon'			  => 'hcatcher1an',
+						'pos_id'          => 237,
+				)
+		)
 	)
 );
 
@@ -1785,7 +1834,7 @@ $stars = array(
        'def'    => array (99, 1, 23, 4, 28, 29),
        'cost'          => 320000,
        'icon'          => 'star',
-       'races'         => array(9),
+       'races'         => array(9, 24),
    ),
    'Grim Ironjaw' => array (
        'id'            => -17,
@@ -1939,7 +1988,7 @@ $stars = array(
        'def'    => array (99, 1, 54),
        'cost'          => 260000,
        'icon'          => 'star',
-       'races'         => array(9),
+       'races'         => array(9, 24),
    ),
    'Morg \'n\' Thorg' => array (
        'id'            => -31,
@@ -1950,7 +1999,7 @@ $stars = array(
        'def'    => array (99, 1, 54, 59, 110),
        'cost'          => 430000,
        'icon'          => 'star',
-       'races'         => array(0, 1, 2, 21, 3, 4, 5, 6, 7, 8, 9, 11, 12, 14, 15, 16, 18, 19, 22, 23, 20),
+       'races'         => array(0, 1, 2, 21, 3, 4, 5, 6, 7, 8, 9, 11, 12, 14, 15, 16, 18, 19, 22, 23, 20, 24),
    ),
    'Nobbla Blackwart' => array (
        'id'            => -32,
@@ -2104,7 +2153,7 @@ $stars = array(
        'def'    => array (99, 1, 2, 23, 24, 106, 107),
        'cost'          => 270000,
        'icon'          => 'star',
-       'races'         => array(0, 4, 7, 8, 9, 14, 20),
+       'races'         => array(0, 4, 7, 8, 9, 14, 20, 24),
    ),
    'Zzharg Madeye' => array (
        'id'            => -46,
@@ -2148,7 +2197,7 @@ $stars = array(
     'def'           => array (99, 21, 42, 6, 7, 8),
     'cost'          => 150000,
     'icon'          => 'star',
-    'races'         => array(5, 8, 20)
+    'races'         => array(5, 8, 20, 24)
 ),
 
 'Fezglitch' => array (
@@ -2281,7 +2330,7 @@ $stars = array(
     'def'           => array (99, 2, 26, 59),
     'cost'          => 150000,
     'icon'          => 'star',
-    'races'         => array(0, 7, 20)
+    'races'         => array(0, 7, 20, 24)
 ),
 	'Work Experience Kid (Home)' => array (
 		'id'            => -62,
