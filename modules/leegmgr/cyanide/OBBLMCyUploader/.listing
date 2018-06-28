@@ -1,6 +1,0 @@
--rw-r--r-- 1 ftp ftp          43008 Aug 26  2013 Interop.Shell32.dll
--rw-r--r-- 1 ftp ftp           6892 Aug 26  2013 main.cs
--rwxr-xr-x 1 ftp ftp             76 Aug 26  2013 OBBLMCyUploader.bat
--rwxr-xr-x 1 ftp ftp          12288 Aug 26  2013 OBBLMCyUploader.exe
--rw-r--r-- 1 ftp ftp            477 Aug 26  2013 readme.txt
--rw-r--r-- 1 ftp ftp           8033 Aug 26  2013 uploadzip.cs
