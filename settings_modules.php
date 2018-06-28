@@ -13,13 +13,13 @@ $settings['modules_enabled'] = array(
     'SGraph'             => true, # Graphical statistics
     'Memmatches'         => true, # Memorable matches viewer
     'Wanted'             => true, # Wanted list
-    'HOF'                => true, # Hall of fame
-    'Prize'              => true, # Tournament prizes list
+    'HOF'                => false, # Hall of fame
+    'Prize'              => false, # Tournament prizes list
     'Registration'       => true, # Allows users to register on the site.
     'Search'             => true, # Search for coaches and teams.
     'TeamCompare'        => true, # Team strength compare
-    'Cemetery'           => true, # Team cemetery page
-    'FamousTeams'        => true, # Famous Teams page
+    'Cemetery'           => false, # Team cemetery page
+    'FamousTeams'        => false, # Famous Teams page
     'PDFMatchReport'     => true, # Generating PDF forms for tabletop match reports.
     // The below modules are not well maintained and are poorly supported!!
     'UPLOAD_BOTOCS'      => false, # Allow upload of a BOTOCS match

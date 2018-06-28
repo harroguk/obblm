@@ -88,7 +88,6 @@ public static function dispList()
         $retired = $t->retired;
         $t->retired = ($t->retired) ? '<b>'.$lng->getTrn('common/yes').'</b>' : $lng->getTrn('common/no');
         $t->rdy = ($t->rdy && !$retired) ? '<font color="green">'.$lng->getTrn('common/yes').'</font>' : '<font color="red">'.$lng->getTrn('common/no').'</font>';
-        $t->f_rname = $lng->getTrn('race/'.strtolower(str_replace(' ','', $t->f_rname)));
 
         $teams[] = $t;
     }
@@ -278,7 +277,6 @@ private function _handleActions($ALLOW_EDIT)
                 if (Module::isRegistered('LogSubSys')) {
                     Module::run('LogSubSys', array('createEntry', T_LOG_GOLDBANK, $coach->coach_id, "Coach '$coach->name' (ID=$coach->coach_id) added a treasury delta for team '$team->name' (ID=$team->team_id) of amount = $dtreas"));
                 }
-                SQLTriggers::run(T_SQLTRIG_TEAM_DPROPS, array('obj' => T_OBJ_TEAM, 'id' => $team->team_id));
                 break;
             case 'spp':               status($p->dspp(($_POST['sign'] == '+' ? 1 : -1) * $_POST['amount'])); break;
             case 'dval':              status($p->dval(($_POST['sign'] == '+' ? 1 : -1) * $_POST['amount']*1000)); break;
@@ -357,14 +355,13 @@ private function _roster($ALLOW_EDIT, $DETAILED, $players)
         if     ($p->is_sold && $DETAILED)   $p->HTMLbcolor = COLOR_HTML_SOLD; # Sold has highest priority.
         elseif ($p->is_dead && $DETAILED)   $p->HTMLbcolor = COLOR_HTML_DEAD;
         elseif ($p->is_mng)                 $p->HTMLbcolor = COLOR_HTML_MNG;
-        elseif ($p->is_journeyman_used)     $p->HTMLbcolor = COLOR_HTML_JOURNEY_USED;
         elseif ($p->is_journeyman)          $p->HTMLbcolor = COLOR_HTML_JOURNEY;
         elseif ($p->mayHaveNewSkill())      $p->HTMLbcolor = COLOR_HTML_NEWSKILL;
         elseif ($DETAILED)                  $p->HTMLbcolor = COLOR_HTML_READY;
 
         $p->skills   = '<small>'.$p->getSkillsStr(true).'</small>';
         $p->injs     = $p->getInjsStr(true);
-        $p->position = "<table style='border-spacing:0px;'><tr><td><img align='left' src='$p->icon' alt='player avatar'></td><td>".$lng->getTrn("position/".strtolower($lng->FilterPosition($p->position)))."</td></tr></table>";
+        $p->position = "<table style='border-spacing:0px;'><tr><td><img align='left' src='$p->icon' alt='player avatar'></td><td>$p->position</td></tr></table>";
 
         if ($DETAILED) {
             $p->mv_cas = "$p->mv_bh/$p->mv_si/$p->mv_ki";
@@ -531,14 +528,13 @@ private function _roster($ALLOW_EDIT, $DETAILED, $players)
             <?php
             if ($DETAILED) {
                 ?>
-                <td style="background-color: <?php echo COLOR_HTML_READY;   ?>;"><font color='black'><b>&nbsp;Ready&nbsp;</b></font></td>
-                <td style="background-color: <?php echo COLOR_HTML_MNG;     ?>;"><font color='black'><b>&nbsp;MNG&nbsp;</b></font></td>
-                <td style="background-color: <?php echo COLOR_HTML_JOURNEY; ?>;"><font color='black'><b>&nbsp;Journey&nbsp;</b></font></td>
-                <td style="background-color: <?php echo COLOR_HTML_JOURNEY_USED; ?>;"><font color='black'><b>&nbsp;Used&nbsp;journey&nbsp;</b></font></td>
-                <td style="background-color: <?php echo COLOR_HTML_DEAD;    ?>;"><font color='black'><b>&nbsp;Dead&nbsp;</b></font></td>
-                <td style="background-color: <?php echo COLOR_HTML_SOLD;    ?>;"><font color='black'><b>&nbsp;Sold&nbsp;</b></font></td>
-                <td style="background-color: <?php echo COLOR_HTML_STARMERC;?>;"><font color='black'><b>&nbsp;Star/merc&nbsp;</b></font></td>
-                <td style="background-color: <?php echo COLOR_HTML_NEWSKILL;?>;"><font color='black'><b>&nbsp;New&nbsp;skill&nbsp;</b></font></td>
+                <td style="background-color: <?php echo COLOR_HTML_READY;   ?>;"><font color='black'>Ready</font></td>
+                <td style="background-color: <?php echo COLOR_HTML_MNG;     ?>;"><font color='black'>MNG</font></td>
+                <td style="background-color: <?php echo COLOR_HTML_JOURNEY; ?>;"><font color='black'>Journey</font></td>
+                <td style="background-color: <?php echo COLOR_HTML_DEAD;    ?>;"><font color='black'>Dead</font></td>
+                <td style="background-color: <?php echo COLOR_HTML_SOLD;    ?>;"><font color='black'>Sold</font></td>
+                <td style="background-color: <?php echo COLOR_HTML_STARMERC;?>;"><font color='black'>Star/merc</font></td>
+                <td style="background-color: <?php echo COLOR_HTML_NEWSKILL;?>;"><font color='black'>New&nbsp;skill</font></td>
                 <?php
             }
             ?>
@@ -652,8 +648,8 @@ border-bottom:0px;border-left:0px;border-top:0px;border-right:0px;
         <li><a href="<?php echo $url.'&amp;subsec=about';?>"><?php echo $lng->getTrn('common/about');?></a></li>
         <li><a href="<?php echo $url.'&amp;subsec=games';?>"><?php echo $lng->getTrn('profile/team/games');?></a></li>
         <?php
-        echo "<li><a href='${url}&amp;subsec=hhstar'>".$lng->getTrn('common/starhh')."</a></li>\n";
-        echo "<li><a href='${url}&amp;subsec=hhmerc'>".$lng->getTrn('common/merchh')."</a></li>\n";
+        echo "<li><a href='${url}&amp;subsec=hhstar' title='Show/hide star hire history'>Star HH</a></li>\n";
+        echo "<li><a href='${url}&amp;subsec=hhmerc' title='Show/hide mercenary hire history'>Merc. HH</a></li>\n";
 
         $pdf    = (Module::isRegistered('PDFroster')) ? "handler.php?type=roster&amp;team_id=$this->team_id&amp;detailed=".($DETAILED ? '1' : '0') : '';
         $botocs = (Module::isRegistered('XML_BOTOCS') && $settings['leegmgr_botocs']) ? "handler.php?type=botocsxml&amp;teamid=$this->team_id" : '';
@@ -850,7 +846,7 @@ private function _actionBoxes($ALLOW_EDIT, $players)
                 </tr>
                 <tr>
                     <td><?php echo $lng->getTrn('common/race');?></td>
-                    <td><a href="<?php echo urlcompile(T_URL_PROFILE,T_OBJ_RACE,$team->f_race_id,false,false);?>"><?php echo $lng->getTrn('race/'.strtolower(str_replace(' ','', $team->f_rname))); ?></a></td>
+                    <td><a href="<?php echo urlcompile(T_URL_PROFILE,T_OBJ_RACE,$team->f_race_id,false,false);?>"><?php echo $team->f_rname; ?></a></td>
                 </tr>
                 <tr>
                     <td><?php echo $lng->getTrn('common/league');?></td>
@@ -887,7 +883,7 @@ private function _actionBoxes($ALLOW_EDIT, $players)
                     <td><?php echo $team->tv/1000 . 'k'; ?></td>
                 </tr>
                 <tr>
-                     <td><?php echo $lng->getTrn('matches/report/treas')?></td>
+                    <td>Treasury</td>
                     <td><?php echo $team->treasury/1000 . 'k'; ?></td>
                 </tr>
                 <tr>
@@ -899,25 +895,25 @@ private function _actionBoxes($ALLOW_EDIT, $players)
                     <?php
                 }
                 if (!in_array($team->f_race_id, $racesNoApothecary)) {
-                    echo "<td>".$lng->getTrn('common/apothecary')."</td>\n";
+                    echo "<td>Apothecary</td>\n";
                     echo "<td>" . ($team->apothecary ? $lng->getTrn('common/yes') : $lng->getTrn('common/no')) . "</td>\n";
                 }
                 ?>
                 </tr>
                 <tr>
-                    <td><?php echo $lng->getTrn('common/reroll')?></td>
+                    <td>Rerolls</td>
                     <td><?php echo $team->rerolls; ?></td>
                 </tr>
                 <tr>
-                    <td><?php echo $lng->getTrn('matches/report/ff')?></td>
+                    <td>Fan&nbsp;Factor</td>
                     <td><?php echo $team->rg_ff; ?></td>
                 </tr>
                 <tr>
-                    <td><?php echo $lng->getTrn('common/ass_coach')?></td>
+                    <td>Ass.&nbsp;Coaches</td>
                     <td><?php echo $team->ass_coaches; ?></td>
                 </tr>
                 <tr>
-                    <td><?php echo $lng->getTrn('common/cheerleader')?></td>
+                    <td>Cheerleaders</td>
                     <td><?php echo $team->cheerleaders; ?></td>
                 </tr>
                 <tr>
@@ -1065,7 +1061,7 @@ private function _actionBoxes($ALLOW_EDIT, $players)
                             // Show players on the select list if buyable, or if player is a potential journeyman AND team has not reached journeymen limit.
                             if (($team->isPlayerBuyable($details['pos_id']) && $team->treasury >= $details['cost']) ||
                                 (($details['qty'] == 16 || $details['qty'] == 12) && count($active_players) < $rules['journeymen_limit'])) {
-                                echo "<option value='$details[pos_id]'>" . $details['cost']/1000 . "k | ".$lng->GetTrn('position/'.strtolower($lng->FilterPosition($pos)))."</option>\n";
+                                echo "<option value='$details[pos_id]'>" . $details['cost']/1000 . "k | $pos</option>\n";
                                 $DISABLE = false;
                             }
                         }
@@ -1085,7 +1081,7 @@ private function _actionBoxes($ALLOW_EDIT, $players)
                         ?>
                         </select>
                         <br><br>
-                        <?php echo $lng->GetTrn('common/journeyman')?> ? <input type="checkbox" name="as_journeyman" value="1">
+                        Journeyman? <input type="checkbox" name="as_journeyman" value="1">
                         <br><br>
                         <?php echo $lng->getTrn('common/name');?>:<br>
                         <input type="text" name="name">

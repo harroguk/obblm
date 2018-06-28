@@ -1,0 +1,6 @@
+drwxr-xr-x 1 ftp ftp              0 Jun 22  2017 data
+-rw-r--r-- 1 ftp ftp           7691 Aug 26  2013 example.php
+-rw-r--r-- 1 ftp ftp          21752 Aug 26  2013 lib_cy_match_db.php
+-rw-r--r-- 1 ftp ftp          39572 Aug 26  2013 lib_cy_team_db.php
+drwxr-xr-x 1 ftp ftp              0 Dec 21  2016 OBBLMCyUploader
+drwxr-xr-x 1 ftp ftp              0 Dec 21  2016 sql

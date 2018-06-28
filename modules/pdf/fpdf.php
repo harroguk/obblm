@@ -895,7 +895,7 @@ function Ln($h=null)
 		$this->y+=$h;
 }
 
-function Image($file, $x=null, $y=null, $w=0, $h=0, $type='', $link='', $isMask=false, $maskImg=0)
+function Image($file, $x=null, $y=null, $w=0, $h=0, $type='', $link='')
 {
 	//Put an image on the page
 	if(!isset($this->images[$file]))
@@ -991,7 +991,6 @@ function SetXY($x, $y)
 
 function Output($name='', $dest='')
 {
-	ob_clean();
 	//Output PDF to some destination
 	if($this->state<3)
 		$this->Close();

@@ -17,6 +17,14 @@ require_once('jpgraph_text.inc.php');
 require_once('jpgraph_legend.inc.php');
 require_once('gd_image.inc.php');
 
+/*
+ * Get time zone info from PHP config
+*/
+if (version_compare(PHP_VERSION, 5.3, '>='))
+{
+  @date_default_timezone_set(date_default_timezone_get());
+}
+
 // Version info
 define('JPG_VERSION','3.0.7');
 
