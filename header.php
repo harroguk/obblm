@@ -86,6 +86,7 @@ define('T_HTMLBOX_MATCH', 5);
 # General settings
 require_once('lib/settings_default.php'); # Defaults
 require_once('settings.php');             # Overrides
+require_once('settings-db.php');             # Overrides
 require_once('localsettings/settings_none.php'); # Defaults. Overrides are league dependant and are not loaded here - see setupGlobalVars()
 # Load game data --- Module settings might depend on game data, so we include it first
 require_once('lib/game_data.php'); # LRB6 MUST be loaded.
