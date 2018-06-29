@@ -430,23 +430,25 @@ function sec_main() {
                         </tr>
                         <?php
                         foreach ($players as $p) {
-                            echo "<tr>\n";
-                            echo "<td>".(($settings['fp_links']) ? "<a href='".urlcompile(T_URL_PROFILE,T_OBJ_PLAYER,$p['player_id'],false,false)."'>$p[name]</a>" : $p['name'])."</td>\n";
-                            if ($box['show_team']) {
-                                echo "<td>".(($settings['fp_links']) ? "<a href='".urlcompile(T_URL_PROFILE,T_OBJ_TEAM,$p['owned_by_team_id'],false,false)."'>$p[f_tname]</a>" : $p['f_tname'])."</td>\n";
-                            }
-                            echo "<td>".$p[$f]."</td>\n";
+							if (!$p['retired']) {
+								echo "<tr>\n";
+								echo "<td>".(($settings['fp_links']) ? "<a href='".urlcompile(T_URL_PROFILE,T_OBJ_PLAYER,$p['player_id'],false,false)."'>$p[name]</a>" : $p['name'])."</td>\n";
+								if ($box['show_team']) {
+									echo "<td>".(($settings['fp_links']) ? "<a href='".urlcompile(T_URL_PROFILE,T_OBJ_TEAM,$p['owned_by_team_id'],false,false)."'>$p[f_tname]</a>" : $p['f_tname'])."</td>\n";
+								}
+								echo "<td>".$p[$f]."</td>\n";
 
-                            if ($p['date_sold'] > 0)
-                                echo "<td><i><b><font color='blue'>".'Retired'."</font></b></i></td>\n";
-                            elseif ($p['status'] == 1)
-                                echo "<td><i><b><font color='green'>".'Ready'."</font></b></i></td>\n";
-                            elseif ($p['status'] > 1 && $p['status'] < 8 )
-                                echo "<td><i><b><font color='purple'>".'Injured'."</font></b></i></td>\n";
-                            elseif ($p['status'] == 8)
-                                echo "<td><i><b><font color='red'>".'Dead'."</font></b></i></td>\n";
-                            echo "</tr>";
-                        }
+								if ($p['date_sold'] > 0)
+									echo "<td><i><b><font color='blue'>".'Retired'."</font></b></i></td>\n";
+								elseif ($p['status'] == 1)
+									echo "<td><i><b><font color='green'>".'Ready'."</font></b></i></td>\n";
+								elseif ($p['status'] > 1 && $p['status'] < 8 )
+									echo "<td><i><b><font color='purple'>".'Injured'."</font></b></i></td>\n";
+								elseif ($p['status'] == 8)
+									echo "<td><i><b><font color='red'>".'Dead'."</font></b></i></td>\n";
+								echo "</tr>";
+							}
+						}
                         ?>
                     </table>
                 </div>
