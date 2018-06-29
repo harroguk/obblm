@@ -1693,7 +1693,7 @@ $DEA = array (
 	'Daemons of Khorne' => array (
 		'other'	=> array (
 			'rr_cost' => 70000,
-			'icon' => 'dkhorne.jpg',
+			'icon' => 'dkhorne.png',
 			'race_id' => T_RACE_DKHORNE, # (Daemons of Khorne)
 		),
 		'players'	=> array (
