@@ -32,6 +32,7 @@ define('T_RACE_CHAOS_PACT', 21);
 define('T_RACE_SLANN', 22);
 define('T_RACE_UNDERWORLD', 23);
 define('T_RACE_BRETTONIA', 24);
+define('T_RACE_DKHORNE', 25);
 
 $DEA = array (
 	'Amazon'	=> array (
@@ -1688,6 +1689,67 @@ $DEA = array (
 						'pos_id'          => 237,
 				)
 		)
+	),
+	'Daemons of Khorne' => array (
+		'other'	=> array (
+			'rr_cost' => 70000,
+			'icon' => 'dkhorne.jpg',
+			'race_id' => T_RACE_DKHORNE, # (Daemons of Khorne)
+		),
+		'players'	=> array (
+  			'Pit Fighter' => array (
+    				'ma'        	=> 6,
+    				'st'        	=> 3,
+    				'ag'        	=> 3,
+    				'av'        	=> 8,
+    				'def'	    => array (5),
+    				'norm'		=> array ('G', 'P'),
+    				'doub'		=> array ('A', 'S'),
+    				'qty'			  => 16,
+    				'cost'			  => 60000,
+    				'icon'			  => 'hlineman1an',
+    			    'pos_id'          => 250,
+  			),
+  			'Bloodletter Daemon' => array (
+    				'ma'        	=> 6,
+    				'st'        	=> 3,
+    				'ag'        	=> 3,
+    				'av'        	=> 7,
+    				'def'	    => array (75,53,103),
+    				'norm'		=> array ('G', 'A', 'S'),
+    				'doub'		=> array ('P'),
+    				'qty'			  => 4,
+    				'cost'			  => 80000,
+    				'icon'			  => 'hblitzer1an',
+    			    'pos_id'          => 251,
+  			),
+  			'Khorne Herald'	=> array (
+    				'ma'        	=> 6,
+    				'st'        	=> 3,
+    				'ag'        	=> 3,
+    				'av'        	=> 8,
+    				'def'	    => array (5,75,53),
+    				'norm'		=> array ('G', 'S'),
+    				'doub'		=> array ('A', 'P'),
+    				'qty'			  => 2,
+    				'cost'			  => 90000,
+    				'icon'			  => 'hblitzer1an',
+    			    'pos_id'          => 252,
+  			),
+  			'Bloodthirster'	=> array (
+    				'ma'        	=> 6,
+    				'st'        	=> 5,
+    				'ag'        	=> 1,
+    				'av'        	=> 9,
+    				'def'	    => array (99, 112, 71, 5, 75, 53, 103),
+    				'norm'		=> array ('S'),
+    				'doub'		=> array ('G', 'A', 'P'),
+    				'qty'			  => 1,
+    				'cost'			  => 180000,
+    				'icon'			  => 'hblitzer1an',
+    			    'pos_id'          => 253,
+  			),
+		)
 	)
 );
 
@@ -1823,7 +1885,7 @@ $stars = array(
        'def'    => array (99, 5, 75, 54, 59),
        'cost'          => 310000,
        'icon'          => 'star',
-       'races'         => array(1, 2, 15),
+       'races'         => array(1, 2, 15, 25),
    ),
    'Griff Oberwald' => array (
        'id'            => -16,
@@ -1999,7 +2061,7 @@ $stars = array(
        'def'    => array (99, 1, 54, 59, 110),
        'cost'          => 430000,
        'icon'          => 'star',
-       'races'         => array(0, 1, 2, 21, 3, 4, 5, 6, 7, 8, 9, 11, 12, 14, 15, 16, 18, 19, 22, 23, 20, 24),
+       'races'         => array(0, 1, 2, 21, 3, 4, 5, 6, 7, 8, 9, 11, 12, 14, 15, 16, 18, 19, 22, 23, 20, 24, 25),
    ),
    'Nobbla Blackwart' => array (
        'id'            => -32,
