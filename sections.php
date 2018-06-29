@@ -430,7 +430,7 @@ function sec_main() {
                         </tr>
                         <?php
                         foreach ($players as $p) {
-							if (!$p['retired']) {
+							if (!$p['date_sold'] > 0) {
 								echo "<tr>\n";
 								echo "<td>".(($settings['fp_links']) ? "<a href='".urlcompile(T_URL_PROFILE,T_OBJ_PLAYER,$p['player_id'],false,false)."'>$p[name]</a>" : $p['name'])."</td>\n";
 								if ($box['show_team']) {
