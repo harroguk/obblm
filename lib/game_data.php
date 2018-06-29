@@ -1641,9 +1641,9 @@ $DEA = array (
 				)
 		)
 	),
-	'Brettonia' => array (
+	'Brettonian' => array (
 		'other'	=> array (
-			'rr_cost' => 60000,
+			'rr_cost' => 70000,
 			'icon' => 'brettonian.jpg',
 			'race_id' => T_RACE_BRETTONIA, # (Brettonia)
 		),
@@ -1675,15 +1675,15 @@ $DEA = array (
 						'pos_id'          => 236,
 				),
 				'Blitzer'	=> array (
-						'ma'        	=> 8,
+						'ma'        	=> 7,
 						'st'        	=> 3,
 						'ag'        	=> 3,
 						'av'        	=> 8,
 						'def'	    => array (1, 20, 2),
-						'norm'		=> array ('G', 'S'),
-						'doub'		=> array ('A', 'P'),
+						'norm'		=> array ('G', 'A', 'P'),
+						'doub'		=> array ('S'),
 						'qty'			  => 4,
-						'cost'			  => 120000,
+						'cost'			  => 110000,
 						'icon'			  => 'hcatcher1an',
 						'pos_id'          => 237,
 				)
