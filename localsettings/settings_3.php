@@ -15,9 +15,13 @@ $settings['welcome']     = '<p>Welcome to The Daventry Vaulters Blood Bowl Leagu
 <p>Contact Someone from the <a href="https://www.facebook.com/groups/1186639744775184/">Daventry Blood Bowl League Facebook Group</a> and they will point you to the right person to help you join the league.</p>
 <p>Once you have an account on this site, then you can Login.</p>
 <p>Finally use your Coaches Corner (CC) to create your starting team.</p>';
-$settings['rules']       = '<p>We play the rules as per Bloodbowl 2016 with DZ1 and DZ2. If you require any clarrifications you should probably speak to SparkyDave.</p>
-
-<p>In order to cover the associated costs of running this league website (Domain Names/Hosting) I am always open to receive donations.</p> 
+$settings['rules']       = '<p>In order to cover the associated costs of running this league website I am always open to receive donations.
+This includes covering costs for...
+<ul>
+<li>Domain Name</li>
+<li>Hosting on Google Cloud</li>
+<li>Site Maintenance by me</li>
+</ul></p> 
 
 <a href="https://paypal.me/Harroguk/5">
 <img src="https://www.paypalobjects.com/en_GB/i/btn/btn_donate_LG.gif"
