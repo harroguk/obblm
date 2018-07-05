@@ -1083,7 +1083,7 @@ private static function make_menu()
             </ul>
         </li>
 
-        <li><a href="index.php?section=rules"><?php echo $lng->getTrn('menu/rules');?></a></li>
+        <li><a href="index.php?section=rules">Donations</a></li>
         <li><a href="index.php?section=about">OBBLM</a></li>
         <?php
         if (!empty($settings['league_url'])) {
