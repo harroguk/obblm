@@ -7,30 +7,22 @@
 /* General */
 
 $settings['league_name'] = 'Daventry Vaulters League'; // Name of the site or the league name if only one league is being managed.
-$settings['forum_url']   = 'http://www.daventryvaulters.co.uk/forum/viewforum.php?f=53'; // URL of league forum, if you have such. If not then leave this empty, that is = '' (two quotes only).
+$settings['forum_url']   = 'https://www.facebook.com/groups/1186639744775184/'; // URL of league forum, if you have such. If not then leave this empty, that is = '' (two quotes only).
 $settings['stylesheet']  = 1;                  // Default is 1. OBBLM CSS stylesheet for non-logged in guests. Currently stylesheet 1 and 2 are the only existing stylesheets.
 $settings['lang']        = 'en-GB';            // Default language. Existing: en-GB, es, de, fr.
 $settings['fp_links']    = true;               // Default is true. Generate coach, team and player links on the front page?
 $settings['welcome']     = '<p>Welcome to The Daventry Vaulters Blood Bowl League.</p>
-<p>Contact Harroguk on The Daventry Vaulters Forum and he will create you an account and give you your login details.</p>
-<p>Login to this page then use your Coaches Corner (CC) to create your starting team.</p>
-<p>Once you will be automatically entered into the next League that starts.</p>';
-$settings['rules']       = '<p>We play the rules as listed in our <a href=http://www.level10.org/wiki/>Wiki</a>.</p>
+<p>Contact Someone from https://www.facebook.com/groups/1186639744775184/ and they will point you to the right person to help you join the league.</p>
+<p>Once you have an account on this site, then you can Login.,/p
+<p>Finally use your Coaches Corner (CC) to create your starting team.</p>';
+$settings['rules']       = '<p>We play the rules as per Bloodbowl 2016 with DZ1 and DZ2. If you require any clarrifications you should probably speak to SparkyDave.</p>
 
-<p>In order to cover the associated costs of running the Leauge there is a entrance fee for each <b>20 Week/10 Round</b> season. Please use the PayPal module below to pay your entry fee of £5.</p> 
+<p>In order to cover the associated costs of running this league website (Domain Names/Hosting) I am always open to receive donations.</p> 
 
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="Q25GS76MMHQFA">
-<input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal — The safer, easier way to pay online.">
-<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
-</form>
-
-
-
-
-
-<p>This fee is used to cover the costs of the website and website software, trohpy for the winner of the league and the engraving on the trophy, ancillary items used for tournaments such as StreetBowl Boards as well as many other minor things that cost a little bit of money, all those little bits add up to too much for my pocket. <br><br> --Harroguk</p>
+<a href="https://paypal.me/Harroguk/5"
+<img border="0" alt="Donate to Harroguk" src="https://www.paypalobjects.com/en_GB/i/btn/btn_donate_LG.gif"
+</a>
+<p><br><br> --Harroguk</p>
 ';
 /*********************
  *   Rules
