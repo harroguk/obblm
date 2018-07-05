@@ -12,15 +12,15 @@ $settings['stylesheet']  = 1;                  // Default is 1. OBBLM CSS styles
 $settings['lang']        = 'en-GB';            // Default language. Existing: en-GB, es, de, fr.
 $settings['fp_links']    = true;               // Default is true. Generate coach, team and player links on the front page?
 $settings['welcome']     = '<p>Welcome to The Daventry Vaulters Blood Bowl League.</p>
-<p>Contact Someone from https://www.facebook.com/groups/1186639744775184/ and they will point you to the right person to help you join the league.</p>
+<p>Contact Someone from the <a href="https://www.facebook.com/groups/1186639744775184/">Daventry Blood Bowl League Facebook Group</a> and they will point you to the right person to help you join the league.</p>
 <p>Once you have an account on this site, then you can Login.,/p
 <p>Finally use your Coaches Corner (CC) to create your starting team.</p>';
 $settings['rules']       = '<p>We play the rules as per Bloodbowl 2016 with DZ1 and DZ2. If you require any clarrifications you should probably speak to SparkyDave.</p>
 
 <p>In order to cover the associated costs of running this league website (Domain Names/Hosting) I am always open to receive donations.</p> 
 
-<a href="https://paypal.me/Harroguk/5"
-<img border="0" alt="Donate to Harroguk" src="https://www.paypalobjects.com/en_GB/i/btn/btn_donate_LG.gif"
+<a href="https://paypal.me/Harroguk/5">
+<img src="https://www.paypalobjects.com/en_GB/i/btn/btn_donate_LG.gif"
 </a>
 <p><br><br> --Harroguk</p>
 ';
