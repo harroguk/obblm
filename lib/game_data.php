@@ -2157,7 +2157,7 @@ $stars = array(
        'icon'          => 'star',
        'races'         => array(2),
    ),
-   'Ripper' => array (
+   'Ripper Bolgrot' => array (
        'id'            => -37,
        'ma'            => 4,
        'st'            => 6,
@@ -2498,7 +2498,84 @@ $stars = array(
 		'cost'          => 210000,
 		'icon'          => 'star',
 		'races'         => array(15)
-	)
+	), 
+	'Glart Smashrip' => array (
+		'id'            => -68,
+		'ma'            => 5,
+		'st'            => 4,
+		'ag'            => 2,
+		'av'            => 8,
+		'def'    => array (1, 71, 51, 53, 99, 57),
+		'cost'          => 190000,
+		'icon'          => 'star',
+		'races'         => array(19, 23)
+	), 
+	'Kreek Rustgouger' => array (
+		'id'            => -69,
+		'ma'            => 5,
+		'st'            => 7,
+		'ag'            => 2,
+		'av'            => 9,
+		'def'    => array (91, 99, 54, 100, 76, 105),
+		'cost'          => 130000,
+		'icon'          => 'star',
+		'races'         => array(19, 23)
+	), 
+	'Bo Gallante' => array (
+		'id'            => -70,
+		'ma'            => 8,
+		'st'            => 3,
+		'ag'            => 4,
+		'av'            => 7,
+		'def'    => array (23, 99, 26, 28, 29),
+		'cost'          => 160000,
+		'icon'          => 'star',
+		'races'         => array(8)
+	), 
+	'Karla von Kill' => array (
+		'id'            => -71,
+		'ma'            => 6,
+		'st'            => 4,
+		'ag'            => 3,
+		'av'            => 8,
+		'def'    => array (1, 2, 23, 24, 99),
+		'cost'          => 220000,
+		'icon'          => 'star',
+		'races'         => array(0, 7, 9, 14)
+	), 
+	'Madcap Miggz' => array (
+		'id'            => -72,
+		'ma'            => 6,
+		'st'            => 4,
+		'ag'            => 3,
+		'av'            => 8,
+		'def'    => array (50, 71, 25, 99, 100, 79, 112),
+		'cost'          => 170000,
+		'icon'          => 'star',
+		'races'         => array(19, 23)
+	),
+   'Lucien Swift (+ Valen Swift)' => array (
+       'id'            => -73,
+       'ma'            => 7,
+       'st'            => 3,
+       'ag'            => 4,
+       'av'            => 8,
+       'def'    => array (1, 13, 54, 99),
+       'cost'          => 390,
+       'icon'          => 'star',
+       'races'         => array(5, 8, 20),
+   ),
+   'Valen Swift (included in Lucien Swift)' => array (
+       'id'            => -74,
+       'ma'            => 7,
+       'st'            => 3,
+       'ag'            => 5,
+       'av'            => 7,
+       'def'    => array (99, 23, 104, 108),
+       'cost'          => 0,
+       'icon'          => 'star',
+       'races'         => array(40, 44, 45, 46, 99, 12),
+   )
 );
 
 ksort($stars, SORT_STRING);
