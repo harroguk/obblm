@@ -504,6 +504,32 @@ $DEA = array (
 				'cost'			=> 110000,
 				'icon'			=> 'troll1an',
 			    'pos_id'        => 65,
+			),
+			'Doom Diver'	=> array (
+				'ma'        	=> 6,
+ 				'st'        	=> 2,
+ 				'ag'        	=> 3,
+ 				'av'        	=> 7,
+ 				'def'	    => array (),
+ 				'norm'		=> array ('A'),
+ 				'doub'		=> array ('G', 'S', 'P'),
+ 				'qty'			=> 1,
+				'cost'			=> 60000,
+				'icon'			=> 'goblin3an',
+			    'pos_id'        => 66,
+			),
+			'Ooligan'	=> array (
+				'ma'        	=> 6,
+ 				'st'        	=> 2,
+ 				'ag'        	=> 3,
+ 				'av'        	=> 7,
+ 				'def'	    => array (72, 23, 97, 104, 108),
+ 				'norm'		=> array ('A'),
+ 				'doub'		=> array ('G', 'S', 'P'),
+ 				'qty'			=> 1,
+				'cost'			=> 70000,
+				'icon'			=> 'goblin3an',
+			    'pos_id'        => 67,
 			)
 		)
 	),
@@ -2604,6 +2630,7 @@ $skillarray	= array (
 		114 => 'Timmm-ber!',
 		115 => 'Weeping Dagger',
 		116 => 'Monstrous Mouth',
+		117 => 'Swoop',
 	),
 );
 
