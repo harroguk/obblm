@@ -758,9 +758,7 @@ function sec_objhandler() {
 function sec_rules() {
 
     global $lng, $settings;
-    title($lng->getTrn('menu/rules'));
-    list($sel_lid, $HTML_LeagueSelector) = HTMLOUT::simpleLeagueSelector();
-    echo $HTML_LeagueSelector;
+    title("Donations");
     echo "<br><br>";
     echo $settings['rules'];
 }
