@@ -2571,10 +2571,10 @@ $stars = array(
        'st'            => 3,
        'ag'            => 5,
        'av'            => 7,
-       'def'    => array (99, 23, 104, 108),
+       'def'    => array (40, 44, 45, 46, 99, 12),
        'cost'          => 0,
        'icon'          => 'star',
-       'races'         => array(40, 44, 45, 46, 99, 12),
+       'races'         => array(5, 8, 20),
    )
 );
 
