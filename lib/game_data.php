@@ -1503,6 +1503,19 @@ $DEA = array (
 						'cost'			  => 150000,
 						'icon'			  => 'minotaur2an',
 						'pos_id'          => 216,
+				),
+				'Renegade Orc Lineman'	=> array (
+						'ma'        	=> 5,
+						'st'        	=> 3,
+						'ag'        	=> 3,
+						'av'        	=> 9,
+						'def'	    => array (113),
+						'norm'		=> array ('G','M'),
+						'doub'		=> array ('A', 'S', 'P'),
+						'qty'			  => 1,
+						'cost'			  => 50000,
+						'icon'			  => 'olineman1an',
+						'pos_id'          => 216,
 				)
 		)
 	),
