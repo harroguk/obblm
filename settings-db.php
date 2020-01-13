@@ -5,6 +5,6 @@
  **************************/
 
 $db_name   = 'obblm90';
-$db_user   = '';
-$db_passwd = '';
+$db_user   = 'bloodbowl';
+$db_passwd = 'hidden';
 $db_host   = 'localhost';
