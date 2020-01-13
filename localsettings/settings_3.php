@@ -76,7 +76,7 @@ $settings['fp_messageboard']['show_match_summaries'] = true; // Default is true.
 $settings['fp_standings'] = array(
     # This will display a standings box of the top 6 teams in tournament with ID = x
     array(
-        'id'     => 165,
+        'id'     => 168,
         'box_ID' => 1,
         'type'   => 'tournament',
         'HRS'    => 5,
