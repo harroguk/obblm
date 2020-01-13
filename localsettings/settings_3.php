@@ -66,7 +66,6 @@ $settings['fp_messageboard']['show_match_summaries'] = true; // Default is true.
 
 /*
     The below settings define which boxes to show on the right side of the front page.
-    
     Note, every box MUST have a unique 'box_ID' number.
     The box IDs are used to determine the order in which the boxes are shown on the front page.
     The box with 'box_ID' = 1 is shown at the top of the page, the box with 'box_ID' = 2 is displayed underneath it and so forth.
@@ -77,22 +76,22 @@ $settings['fp_messageboard']['show_match_summaries'] = true; // Default is true.
 $settings['fp_standings'] = array(
     # This will display a standings box of the top 6 teams in tournament with ID = x
     array(
-        'id'     => 154,
+        'id'     => 165,
         'box_ID' => 1,
         'type'   => 'tournament',
-        'HRS'    => 5,		
-        'title'  => '1st Division',
-        'length' => 12,
+        'HRS'    => 5,
+        'title'  => 'American Football Conference',
+        'length' => 14,
 		'infocus' => true, # If true a random team from the standings will be selected and its top players displayed.
         # Format: "Displayed table column name" => "OBBLM field name".
                 'fields' => array('Name' => 'name',  'P' => 'played', 'W' => 'won', 'D' => 'draw', 'L' => 'lost', 'TDCAS' => 'tdcas', 'PTS' => 'pts'),
     ),
-	array(
-        'id'     => 155,
+/*	array(
+        'id'     => 162,
         'box_ID' => 2,
         'type'   => 'tournament',
-        'HRS'    => 5,	
-        'title'  => '2nd Division',
+        'HRS'    => 5,
+        'title'  => 'National Football Conference',
         'length' => 10,
 		'infocus' => false,
         # Format: "Displayed table column name" => "OBBLM field name".
@@ -102,7 +101,7 @@ $settings['fp_standings'] = array(
         'id'     => 106,
         'box_ID' => 3,
         'type'   => 'tournament',
-        'HRS'    => 5,	
+        'HRS'    => 5,
         'title'  => '3rd Division',
         'length' => 8,
 		'infocus' => false,
@@ -113,7 +112,7 @@ $settings['fp_standings'] = array(
         'id'     => 99,
         'box_ID' => 4,
         'type'   => 'tournament',
-        'HRS'    => 5,	
+        'HRS'    => 5,
         'title'  => '4th Division',
         'length' => 6,
 		'infocus' => false,
@@ -124,7 +123,7 @@ $settings['fp_standings'] = array(
         'id'     => 72,
         'box_ID' => 5,
         'type'   => 'tournament',
-        'HRS'    => 5,	
+        'HRS'    => 5,
         'title'  => '5th Division',
         'length' => 6,
         # Format: "Displayed table column name" => "OBBLM field name".
@@ -156,7 +155,7 @@ $settings['fp_leaders'] = array(
         'box_ID' => 7,
 		'type'      => 'league', # This sets the node to be a tournament. I.e. this will make a leaders box for the tournament with ID = 1		
         'show_team' => true, # Show player's team name?
-        'title'  => 'Headbashers, Most Casualties',  
+        'title'  => 'Headbashers, Most Casualties',
         'field'  => 'cas',
         'length' => 250,
     ),
@@ -166,7 +165,7 @@ $settings['fp_leaders'] = array(
         'box_ID' => 8,
 		'type'      => 'league', # This sets the node to be a tournament. I.e. this will make a leaders box for the tournament with ID = 1		
         'show_team' => true, # Show player's team name?
-        'title'  => 'Exterminators, Most Kills',  
+        'title'  => 'Exterminators, Most Kills',
         'field'  => 'ki',
         'length' => 400,
     ),
@@ -177,7 +176,7 @@ $settings['fp_leaders'] = array(
         'box_ID' => 9,
 		'type'      => 'league', # This sets the node to be a tournament. I.e. this will make a leaders box for the tournament with ID = 1		
         'show_team' => true, # Show player's team name?
-        'title'  => 'Scoring Machines, Most TD',  
+        'title'  => 'Scoring Machines, Most TD',
         'field'  => 'td',
         'length' => 300,
     ),
@@ -188,7 +187,7 @@ $settings['fp_leaders'] = array(
         'box_ID' => 10,
 		'type'      => 'league', # This sets the node to be a tournament. I.e. this will make a leaders box for the tournament with ID = 1		
         'show_team' => true, # Show player's team name?
-        'title'  => 'Eagle Eyes, Most CP',  
+        'title'  => 'Eagle Eyes, Most CP',
         'field'  => 'cp',
         'length' => 250,
     ),
@@ -199,7 +198,7 @@ $settings['fp_leaders'] = array(
         'box_ID' => 11,
 		'type'      => 'league', # This sets the node to be a tournament. I.e. this will make a leaders box for the tournament with ID = 1		
         'show_team' => true, # Show player's team name?
-        'title'  => 'Superstars, Most SPP',  
+        'title'  => 'Superstars, Most SPP',
         'field'  => 'spp',
         'length' => 200,
     ),
@@ -209,7 +208,7 @@ $settings['fp_leaders'] = array(
         'box_ID' => 12,
 		'type'      => 'league', # This sets the node to be a tournament. I.e. this will make a leaders box for the tournament with ID = 1		
         'show_team' => true, # Show player's team name?
-        'title'  => 'Lifers, Most Games Played',  
+        'title'  => 'Lifers, Most Games Played',
         'field'  => 'played',
         'length' => 400,
     ),
