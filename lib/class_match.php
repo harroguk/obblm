@@ -34,7 +34,8 @@ $T_ROUNDS = array(
     RT_SEMI => 'matches/tourmatches/roundtypes/semi', 
     RT_QUARTER => 'matches/tourmatches/roundtypes/quarter', 
     RT_ROUND16 => 'matches/tourmatches/roundtypes/rnd16')
-    + array_combine(range(1,13), array_strpack("matches/tourmatches/roundtypes/rnd%s", range(1,13)));
+    array_combine(range(1,13), array_strpack("matches/tourmatches/roundtypes/rnd%s", range(1,13)));
+
 
 // Reserved (non-real) matches:
 define('T_IMPORT_MID', -1);
