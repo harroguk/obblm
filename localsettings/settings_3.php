@@ -157,9 +157,9 @@ $settings['fp_leaders'] = array(
         'show_team' => true, # Show player's team name?
         'title'  => 'Headbashers, Most Casualties',
         'field'  => 'cas',
-        'length' => 125,
+        'length' => 325,
     ),
-			# This will display a 'most Kills' player leaders box for the tournament with ID = xx
+	# This will display a 'most Kills' player leaders box for the tournament with ID = xx
     array(
         'id'     => 3,
         'box_ID' => 8,
@@ -167,7 +167,7 @@ $settings['fp_leaders'] = array(
         'show_team' => true, # Show player's team name?
         'title'  => 'Exterminators, Most Kills',
         'field'  => 'ki',
-        'length' => 125,
+        'length' => 275,
     ),
 
     # This will display a 'most TD' player leaders box for the tournament with ID = xx
@@ -178,7 +178,7 @@ $settings['fp_leaders'] = array(
         'show_team' => true, # Show player's team name?
         'title'  => 'Scoring Machines, Most TD',
         'field'  => 'td',
-        'length' => 150,
+        'length' => 350,
     ),
 
 	# This will display a 'most CP' player leaders box for the tournament with ID = xx
@@ -189,7 +189,7 @@ $settings['fp_leaders'] = array(
         'show_team' => true, # Show player's team name?
         'title'  => 'Eagle Eyes, Most CP',
         'field'  => 'cp',
-        'length' => 125,
+        'length' => 300,
     ),
 
 		# This will display a 'most SPP' player leaders box for the tournament with ID = xx
@@ -200,7 +200,7 @@ $settings['fp_leaders'] = array(
         'show_team' => true, # Show player's team name?
         'title'  => 'Superstars, Most SPP',
         'field'  => 'spp',
-        'length' => 100,
+        'length' => 450,
     ),
 		# This will display a 'most Games Played' player leaders box for the tournament with ID = xx
     array(
@@ -210,7 +210,7 @@ $settings['fp_leaders'] = array(
         'show_team' => true, # Show player's team name?
         'title'  => 'Lifers, Most Games Played',
         'field'  => 'played',
-        'length' => 100,
+        'length' => 450,
     ),
 
 
